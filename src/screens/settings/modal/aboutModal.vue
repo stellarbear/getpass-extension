@@ -4,28 +4,30 @@
       <v-card>
         <v-card-text>
           <div style="white-space: pre-line;">
-            <div class="title font-weight-medium">{{$t($at.AboutTitle)}}</div>
+            <div class="title font-weight-medium text-xs-center">{{$t($at.AboutTitle)}}</div>
             <div class="body-1 font-weight-medium">{{$t($at.AboutStepsTitle)}}</div>
             <div class="caption">{{$t($at.AboutSteps)}}</div>
             <div class="body-1 font-weight-medium">{{$t($at.AboutTipsTitle)}}</div>
             <div class="caption">{{$t($at.AboutTips)}}</div>
+                    
+            <div class="body-1 font-weight-medium">{{$t($at.AboutPlatformTitle)}}</div>
             
-            <div style="display: flex; align-items : center;">             
-              <div style="width: 50%">
-                <div class="body-1 font-weight-medium">{{$t($at.AboutPlatformTitle)}}</div>
+            <v-layout row>
+              <v-flex xs6>
                 <div class="caption" v-for="hyperlink in hyperlinks" :key="hyperlink.text">
                   <a :href="hyperlink.link" target="_blank">{{hyperlink.text}}</a>
                 </div>
-              </div>
-              <div style="width: 50%; text-align:right">
+              </v-flex>
+              <v-flex xs6 style="text-align:right" align-self-center>
                 <img
                   :src="require(`@/assets/animation/getpass.gif`)"
                   width="64"
                   height="64"
                   title="animated logo"
                 />
-              </div>
-            </div>
+                </v-flex>
+              </v-layout> 
+
             <div class="caption">{{$t($at.AboutAfterWord)}}</div>
           </div>
           <!--<a href="https://google.com" target="_blank">google</a>-->
