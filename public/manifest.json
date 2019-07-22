@@ -1,0 +1,22 @@
+{
+    "name": "getpass",
+    "version": "0.12.0",
+    "manifest_version": 2,
+    "description": "stateless cross-platform password manager (generator)",
+    "permissions": [
+      "storage",
+      "webNavigation",
+      "tabs",
+      "*://*/"
+    ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "icons" : {
+      "128": "icon.png"
+    },
+    "browser_action": {
+      "default_icon": "icon.png",
+      "default_title": "passgen",
+      "default_popup": "index.html"
+    }
+  }
+  
