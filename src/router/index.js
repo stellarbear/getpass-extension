@@ -11,6 +11,10 @@ export default new VueRouter({
     mode: 'history',
     routes: [
         {
+            path: '/',
+            redirect: '/index.html'
+        },
+        {
             path: '/index.html',
             name: 'appScreen',
             component: AppScreen
