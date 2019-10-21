@@ -6,25 +6,25 @@
         <v-divider/>
         <v-card-text>
           <v-switch
-            @click="validate"
+            @change="validate" 
             v-model="number"
             class="ma-0 pa-0"
             :label="$t($at.OptionNumbers)"
           ></v-switch>
           <v-switch
-            @click="validate"
+            @change="validate" 
             v-model="upper"
             class="ma-0 pa-0"
             :label="$t($at.OptionUpperCase)"
           ></v-switch>
           <v-switch
-            @click="validate"
+            @change="validate" 
             v-model="lower"
             class="ma-0 pa-0"
             :label="$t($at.OptionLowerCase)"
           ></v-switch>
           <v-switch
-            @click="validate"
+            @change="validate" 
             v-model="special"
             class="ma-0 pa-0"
             :label="$t($at.OptionSpecialChars)"

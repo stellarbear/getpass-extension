@@ -29,11 +29,11 @@
             v-if="dialog"
             autofocus
           ></v-text-field>
-          <v-switch @click="validate" v-model="number" class="ma-0 pa-0" :label="`Numbers (0-9)`"></v-switch>
-          <v-switch @click="validate" v-model="upper" class="ma-0 pa-0" :label="`Upper case (a-z)`"></v-switch>
-          <v-switch @click="validate" v-model="lower" class="ma-0 pa-0" :label="`Lower case (a-z)`"></v-switch>
+          <v-switch @change="validate" v-model="number" class="ma-0 pa-0" :label="`Numbers (0-9)`"></v-switch>
+          <v-switch @change="validate" v-model="upper" class="ma-0 pa-0" :label="`Upper case (a-z)`"></v-switch>
+          <v-switch @change="validate" v-model="lower" class="ma-0 pa-0" :label="`Lower case (a-z)`"></v-switch>
           <v-switch
-            @click="validate"
+            @change="validate"
             v-model="special"
             class="ma-0 pa-0"
             :label="`Special chars (!?..)`"
@@ -66,6 +66,7 @@ export default {
   components: { Numeric },
   data() {
     return {
+      switch1:false,
       valid: false,
       dialog: false,
       value: "",
