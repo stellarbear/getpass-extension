@@ -4,7 +4,7 @@ import { alphabet, verify } from "./alphabet";
 import { sha256 } from 'js-sha256';
 
 const obscure = (input, count) => {
-    if (count == 0) {
+    if (count == 8) {
         return input;
     }
 
